@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import VideoPlaceholder from "./VideoPlaceholder";
 import CompanyMarquee from "./CompanyMarquee";
 

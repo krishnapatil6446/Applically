@@ -3,7 +3,6 @@
 import React from "react";
 import Marquee from "./Marquee";
 
-
 // Sample testimonial data
 const testimonials = [
   {
@@ -78,7 +77,7 @@ const TestimonialMarquee = () => {
                 </div>
                 <div>
                   <p className="text-gray-700 dark:text-gray-300 italic mb-3">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                   <div className="flex flex-col">
                     <span className="font-semibold text-gray-900 dark:text-white">
@@ -113,7 +112,7 @@ const TestimonialMarquee = () => {
                   </div>
                   <div>
                     <p className="text-gray-700 dark:text-gray-300 italic mb-3">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </p>
                     <div className="flex flex-col">
                       <span className="font-semibold text-gray-900 dark:text-white">

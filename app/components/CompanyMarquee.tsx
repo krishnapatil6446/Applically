@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+
 
 const companies = [
   { name: "Google", logo: "/images/google.svg" },

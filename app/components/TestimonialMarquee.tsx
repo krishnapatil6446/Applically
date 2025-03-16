@@ -2,7 +2,7 @@
 
 import React from "react";
 import Marquee from "./Marquee";
-import Image from "next/image";
+
 
 // Sample testimonial data
 const testimonials = [

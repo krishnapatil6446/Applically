@@ -15,7 +15,7 @@ const StatBlock: React.FC<StatProps> = ({ percentage, description }) => {
   );
 };
 
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
   statBlock: {
     display: "flex",
     flexDirection: "column",
@@ -60,7 +60,7 @@ const StatsContainer: React.FC = () => {
   );
 };
 
-const containerStyles = {
+const containerStyles: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-around",
   alignItems: "center",

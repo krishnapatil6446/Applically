@@ -10,7 +10,7 @@ const MadeInIndia = () => {
       <h2 className="text-2xl font-semibold mt-6">Embracing Our Roots, Inspiring Our Future</h2>
       <p className="mt-2">
         At <strong>Applically</strong>, operated by Inceptia Edtech LLP, we stand as a true representation of Indian innovation
-        and self-reliance. As a "Made in India" solution, our mission is to empower professionals and job seekers with AI-driven
+        and self-reliance. As a &quot;Made in India&quot; solution, our mission is to empower professionals and job seekers with AI-driven
         resume building and mock interviews, designed for India, by India.
       </p>
 
@@ -20,7 +20,7 @@ const MadeInIndia = () => {
         <li><strong>Culturally Relevant Design:</strong> Resume templates and interview simulations designed for Indian users.</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-6">Why “Made in India” Matters</h2>
+      <h2 className="text-2xl font-semibold mt-6">Why &quot;Made in India&quot; Matters</h2>
       <ul className="list-disc list-inside mt-2">
         <li><strong>Supporting Local Innovation:</strong> Built entirely by Indian developers and designers.</li>
         <li><strong>Ensuring Quality and Reliability:</strong> Adhering to high standards and Indian regulations.</li>

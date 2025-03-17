@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
       
       <h2 className="text-2xl font-semibold mt-6">1. Introduction</h2>
       <p className="mt-2">
-        Welcome to <strong>Applically</strong> ("we," "our," or "us"), a service provided by Inceptia Edtech LLP.
+        Welcome to <strong>Applically</strong> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), a service provided by Inceptia Edtech LLP.
         We are committed to safeguarding your personal information and respecting your privacy. This Privacy Policy
         outlines how we collect, use, disclose, and protect your information when you access or use our website
         <strong> [applically.com]</strong> and related services. By engaging with our services, you consent to the
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
         <li><strong>Consent:</strong> When you provide explicit consent for specific purposes.</li>
         <li><strong>Performance of Contract:</strong> To fulfill our contractual obligations to you.</li>
         <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations.</li>
-        <li><strong>Legitimate Interests:</strong> To pursue our legitimate business interests, provided they do not override your rights and freedoms.</li>
+        <li><strong>Legitimate Interests:</strong> To pursue our legitimate business interests, provided they don&apos;t override your rights and freedoms.</li>
       </ul>
       
       <h2 className="text-2xl font-semibold mt-6">5. How We Use Your Information</h2>
@@ -86,9 +86,9 @@ const PrivacyPolicy = () => {
         You have rights regarding your personal data, including access, correction, deletion, restriction, data portability, and the right to object or withdraw consent.
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6">10. Children's Privacy</h2>
+      <h2 className="text-2xl font-semibold mt-6">10. Children&apos;s Privacy</h2>
       <p className="mt-2">
-        Our services are not intended for individuals under the age of 18. If we discover that a minor's data has been collected, we will take steps to delete it.
+        Our services are not intended for individuals under the age of 18. If we discover that a minor&apos;s data has been collected, we will take steps to delete it.
       </p>
       
       <h2 className="text-2xl font-semibold mt-6">11. Contact Us</h2>
@@ -102,4 +102,3 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
-

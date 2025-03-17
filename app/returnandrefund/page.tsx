@@ -7,7 +7,7 @@ const ReturnRefundPolicy = () => {
       
       <h2 className="text-2xl font-semibold mt-6">1. Introduction</h2>
       <p className="mt-2">
-        At <strong>Applically</strong>, operated by Inceptia Edtech LLP ("we," "our," or "us"), we are committed to providing
+        At <strong>Applically</strong>, operated by Inceptia Edtech LLP (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), we are committed to providing
         quality services and ensuring customer satisfaction. This Return and Refund Policy outlines the conditions and
         procedures for returns, exchanges, and refunds for our services. By using our services, you agree to the terms set forth in this policy.
       </p>

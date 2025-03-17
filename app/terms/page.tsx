@@ -8,10 +8,10 @@ const TermsAndConditions = () => {
       <h2 className="text-2xl font-semibold mt-6">1. Introduction</h2>
       <p className="mt-2">
         Welcome to <strong>Applically</strong>, a web application operated by
-        Inceptia Edtech LLP ("we," "our," or "us"). These Terms and Conditions
-        ("Terms") govern your access to and use of our website{" "}
-        <strong>[www.applically.com]</strong> ("Website") and related services
-        ("Services"). By accessing or using our Website and Services, you agree
+        Inceptia Edtech LLP (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). These Terms and Conditions
+        (&ldquo;Terms&rdquo;) govern your access to and use of our website{" "}
+        <strong>[www.applically.com]</strong> (&ldquo;Website&rdquo;) and related services
+        (&ldquo;Services&rdquo;). By accessing or using our Website and Services, you agree
         to comply with and be bound by these Terms. If you do not agree with
         these Terms, please do not use our Website or Services.
       </p>
@@ -104,7 +104,7 @@ const TermsAndConditions = () => {
         You agree to indemnify and hold harmless Inceptia Edtech LLP, its
         affiliates, officers, directors, employees, and agents from any claims,
         liabilities, damages, losses, and expenses, including reasonable
-        attorney's fees, arising out of or in connection with your use of our
+        attorney&apos;s fees, arising out of or in connection with your use of our
         Services or violation of these Terms.
       </p>
 

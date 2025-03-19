@@ -53,20 +53,20 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   href="/media"
                   className="text-gray-300 hover:text-blue-400"
                 >
                   PR & Media
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link
+                {/* <Link
                   href="/careers"
                   className="text-gray-300 hover:text-blue-400"
                 >
                   Careers
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <Link href="/faq" className="text-gray-300 hover:text-blue-400">
@@ -78,57 +78,41 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
 
           {/* Products Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Products</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/copilot"
-                  className="text-gray-300 hover:text-blue-400"
-                >
-                  Interview Copilot
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/mock-interview"
-                  className="text-gray-300 hover:text-blue-400"
-                >
-                  AI Mock Interview
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resume-builder"
-                  className="text-gray-300 hover:text-blue-400"
-                >
-                  AI Resume Builder
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/auto-apply"
-                  className="text-gray-300 hover:text-blue-400"
-                >
-                  AI Auto Apply
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/questions"
-                  className="text-gray-300 hover:text-blue-400"
-                >
-                  Interview Questions
-                </Link>
-              </li>
-            </ul>
-          </div>
-
+      <h3 className="text-lg font-semibold mb-4">Products</h3>
+      <ul className="space-y-3">
+        <li>
+          <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-300 hover:text-blue-400">
+            Interview Copilot
+          </a>
+        </li>
+        <li>
+          <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-300 hover:text-blue-400">
+            AI Mock Interview
+          </a>
+        </li>
+        <li>
+          <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-300 hover:text-blue-400">
+            AI Resume Builder
+          </a>
+        </li>
+        <li>
+          <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-300 hover:text-blue-400">
+            AI Auto Apply
+          </a>
+        </li>
+        <li>
+          <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-300 hover:text-blue-400">
+            Interview Questions
+          </a>
+        </li>
+      </ul>
+    </div>
           {/* Interview Questions Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Interview Questions</h3>
             <ul className="space-y-3">
               <li>
-                <Link
+                {/* <Link
                   href="/leadership-questions"
                   className="text-gray-300 hover:text-blue-400"
                 >
@@ -173,7 +157,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                   className="text-gray-300 hover:text-blue-400"
                 >
                   Swift Developer Interview Questions
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </div>

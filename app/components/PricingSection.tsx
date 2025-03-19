@@ -1,10 +1,6 @@
 // components/PricingSection.tsx
 import React from 'react';
 
-interface Feature {
-  text: string;
-}
-
 interface PricingPlan {
   title: string;
   price?: string;
@@ -14,9 +10,10 @@ interface PricingPlan {
   isHighlighted?: boolean;
 }
 
-interface PricingCardProps extends PricingPlan {}
+// Removed unused 'Feature' interface
+// Made PricingCardProps directly extend PricingPlan instead of creating an empty interface
 
-const PricingCard: React.FC<PricingCardProps> = ({ 
+const PricingCard: React.FC<PricingPlan> = ({ 
   title, 
   price, 
   period, 
@@ -123,13 +120,13 @@ const PricingSection: React.FC = () => {
   return (
     <div className="bg-gray-950 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex justify-center">
-        <div className="w-full max-w-5xl"> {/* Changed from max-w-3xl to max-w-5xl for 75% width */}
+        <div className="w-full max-w-5xl">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               Simple, transparent pricing
             </h2>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-300">
-              Choose the plan that's right for you
+              Choose the plan that&apos;s right for you
             </p>
           </div>
           <div className="mt-12 space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-6">

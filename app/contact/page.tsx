@@ -75,6 +75,10 @@ const ContactUs: React.FC = () => {
             Send Message
           </button>
         </form>
+        <div className="text-gray-400 text-sm text-center mt-4">
+          <p>Contact us at: +91 9082574346</p>
+          <p>Email: info@applically.com</p>
+        </div>
       </div>
     </div>
   );

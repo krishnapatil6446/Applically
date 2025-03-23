@@ -111,8 +111,10 @@ const TimelineSection = () => {
   ];
 
   return (
-    <section className="w-full">
-      <Timeline data={timelineData} />
+    <section className="w-full flex justify-center">
+      <div className="w-3/4">
+        <Timeline data={timelineData} />
+      </div>
     </section>
   );
 };

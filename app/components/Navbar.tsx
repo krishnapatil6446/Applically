@@ -21,21 +21,39 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               Interview Copilot
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               AI Application
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               AI Mock Interview
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               Pricing
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               Question Bank
             </a>
+            <button className="bg-blue-600 hover:blue-800 rounded-3xl m-3 p-3">
+              Login
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -47,12 +65,34 @@ const Navbar = () => {
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
                 </svg>
               )}
             </button>
@@ -64,19 +104,34 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+            >
               Interview Copilot
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+            >
               AI Application
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+            >
               AI Mock Interview
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+            >
               Pricing
             </a>
-            <a href="https://ai-resume-builder-snowy.vercel.app/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
+            <a
+              href="https://ai-resume-builder-snowy.vercel.app/"
+              className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+            >
               Question Bank
             </a>
           </div>

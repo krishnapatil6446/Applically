@@ -134,6 +134,9 @@ const Navbar = () => {
             >
               Question Bank
             </a>
+            <button className="bg-blue-600 hover:blue-800 rounded-3xl m-3 p-3">
+              Login
+            </button>
           </div>
         </div>
       )}

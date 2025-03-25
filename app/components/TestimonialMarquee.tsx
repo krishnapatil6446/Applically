@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Marquee from "./Marquee";
+import marquee from "./marquee";
 
 // Sample testimonial data
 const testimonials = [

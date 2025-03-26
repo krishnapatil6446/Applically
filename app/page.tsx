@@ -1,7 +1,7 @@
 import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
 import TimelineSection from "./component/TimelineSection";
-
+import FAQSection from "./component/FAQsection";
 import PricingSection from "./component/PricingSection";
 import Testimonial from "./component/Testimonial";
 
@@ -16,6 +16,7 @@ export default function Home() {
 
       <PricingSection />
       <Testimonial/>
+      <FAQSection/>
     </div>
   );
 }

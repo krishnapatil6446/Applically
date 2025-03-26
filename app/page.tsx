@@ -3,6 +3,7 @@ import Hero from "./component/Hero";
 import TimelineSection from "./component/TimelineSection";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import PricingSection from "./component/PricingSection";
+import Testimonial from "./component/Testimonial";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <TimelineSection />
 
       <PricingSection />
+      <Testimonial/>
     </div>
   );
 }

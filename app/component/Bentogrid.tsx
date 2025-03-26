@@ -8,7 +8,9 @@ import { Marquee } from "@/components/magicui/marquee";
 
 // Placeholder components if actual components are not available
 const AnimatedListDemo = () => <div>Animated List Placeholder</div>;
-const AnimatedBeamMultipleOutputDemo = () => <div>Animated Beam Placeholder</div>;
+const AnimatedBeamMultipleOutputDemo = () => (
+  <div>Animated Beam Placeholder</div>
+);
 
 const files = [
   {
@@ -53,7 +55,7 @@ const features = [
               "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-              "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none",
+              "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none"
             )}
           >
             <div className="flex flex-row items-center gap-2">
@@ -77,7 +79,9 @@ const features = [
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: (
-      <AnimatedListDemo className="absolute right-2 top-4 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" />
+      <div className="absolute right-2 top-4 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90">
+        <AnimatedListDemo />
+      </div>
     ),
   },
   {
@@ -88,7 +92,9 @@ const features = [
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+      <div className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105">
+        <AnimatedBeamMultipleOutputDemo />
+      </div>
     ),
   },
   {
@@ -106,7 +112,6 @@ const features = [
     ),
   },
 ];
-
 // Add default export with max-width and centering
 export default function BentoDemo() {
   return (

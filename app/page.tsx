@@ -1,17 +1,19 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import TimelineSection from "./components/TimelineSection";
-import TestimonialMarquee from "./components/TestimonialMarquee";
-import PricingSection from "./components/PricingSection";
+import Navbar from "./component/Navbar";
+import Hero from "./component/Hero";
+import TimelineSection from "./component/TimelineSection";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import PricingSection from "./component/PricingSection";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <ScrollProgress className="top-[65px]" />
       <Navbar />
       <Hero />
       <TimelineSection />
-      <TestimonialMarquee />
-      <PricingSection/>
+
+      <PricingSection />
     </div>
   );
 }

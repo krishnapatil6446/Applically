@@ -32,15 +32,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Your Interview Journey
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          From preparation to landing your dream job, Applically AI supports
-          you at every step.
-        </p>
-      </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -55,7 +46,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-blue-600 dark:text-blue-400">
                 {item.title}
               </h3>
-
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
@@ -84,5 +74,3 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     </div>
   );
 };
-
-

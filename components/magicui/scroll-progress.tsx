@@ -3,12 +3,11 @@
 import { cn } from "@/lib/utils";
 import { motion, MotionProps, useScroll } from "motion/react";
 import React from "react";
-interface ScrollProgressProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps> {}
 
+// Remove the empty interface or use React.HTMLAttributes<HTMLDivElement> directly
 export const ScrollProgress = React.forwardRef<
   HTMLDivElement,
-  ScrollProgressProps
+  React.HTMLAttributes<HTMLDivElement> & MotionProps
 >(({ className, ...props }, ref) => {
   const { scrollYProgress } = useScroll();
 

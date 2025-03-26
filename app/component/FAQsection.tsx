@@ -58,27 +58,27 @@ const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
 const FAQSection: React.FC = () => {
   const faqData: FAQItemData[] = [
     {
-      question: "What is acme.ai?",
+      question: "What is Applically AI?",
       answer:
-        "Acme.ai is an innovative AI platform designed to help developers and businesses leverage cutting-edge artificial intelligence technologies.",
+        "APPlically AI is an innovative AI platform designed to help developers and businesses leverage cutting-edge artificial intelligence technologies.",
     },
     {
-      question: "How can I get started with acme.ai?",
+      question: "How can I get started with Applically AI?",
       answer:
         "Getting started is simple. Sign up for an account, explore our documentation, and begin integrating AI models into your projects within minutes.",
     },
     {
-      question: "What types of AI models does acme.ai support?",
+      question: "What types of AI models does Applically AI support?",
       answer:
         "We support a wide range of AI models including natural language processing, computer vision, machine learning, and generative AI models.",
     },
     {
-      question: "Is acme.ai suitable for beginners in AI development?",
+      question: "Is Applically AI suitable for beginners in AI development?",
       answer:
         "Absolutely! Our platform offers intuitive tools, comprehensive documentation, and robust support to help beginners learn and grow in AI development.",
     },
     {
-      question: "What kind of support does acme.ai provide?",
+      question: "What kind of support does Applically AI provide?",
       answer:
         "We offer 24/7 technical support, extensive documentation, community forums, and personalized assistance to ensure your success.",
     },

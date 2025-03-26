@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useAnimationFrame } from 'framer-motion';
+import { useAnimationFrame } from 'framer-motion';
 
 // Define an interface for the logo
 interface Logo {

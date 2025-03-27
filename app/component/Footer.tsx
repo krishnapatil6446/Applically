@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaTiktok,
-  FaYoutube,
-} from "react-icons/fa";
+// import {
+//   FaFacebook,
+//   FaTwitter,
+//   FaInstagram,
+//   FaTiktok,
+//   FaYoutube,
+// } from "react-icons/fa";
 
 interface FooterProps {
   className?: string;

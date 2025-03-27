@@ -1,39 +1,44 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 
+// Explicitly define the interface with optional properties
 interface PricingPlan {
   title: string;
-  price?: string;
-  period?: string;
-  features: string[];
+  price?: string | null;
+  period?: string | null;
+  features: readonly string[];
   buttonText: string;
   isHighlighted?: boolean;
 }
 
+// Explicitly type the PricingCard component props
 const PricingCard: React.FC<PricingPlan> = ({ 
   title, 
-  price, 
-  period, 
+  price = null, 
+  period = null, 
   features, 
   buttonText, 
   isHighlighted = false 
 }) => {
   return (
-    <div id='pricing' className={`
-      rounded-lg 
-      border 
-      ${isHighlighted 
-        ? 'border-blue-500 shadow-2xl scale-105 z-10 bg-blue-50' 
-        : 'border-gray-200 bg-white'
-      } 
-      p-6 
-      flex 
-      flex-col 
-      w-full 
-      transition-all 
-      duration-300
-    `}>
+    <div 
+      id='pricing' 
+      className={`
+        rounded-lg 
+        border 
+        ${isHighlighted 
+          ? 'border-blue-500 shadow-2xl scale-105 z-10 bg-blue-50' 
+          : 'border-gray-200 bg-white'
+        } 
+        p-6 
+        flex 
+        flex-col 
+        w-full 
+        transition-all 
+        duration-300
+      `}
+    >
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
         {isHighlighted && (
@@ -75,6 +80,7 @@ const PricingCard: React.FC<PricingPlan> = ({
       </ul>
 
       <button 
+        type="button"
         className={`
           w-full 
           py-3 
@@ -94,59 +100,61 @@ const PricingCard: React.FC<PricingPlan> = ({
   );
 };
 
-const PricingSection: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+// Define plans as a const array with explicit typing
+const PRICING_PLANS: readonly PricingPlan[] = [
+  {
+    title: 'Basic',
+    price: '₹199',
+    period: 'month',
+    features: [
+      '1000 AI Credit',
+      'Personalised Resume',
+      'Personalised Interview',
+      'Unlimited Resume Generate',
+      'Basic Support'
+    ],
+    buttonText: 'Start Basic',
+    isHighlighted: false
+  },
+  {
+    title: 'Pro',
+    price: '₹499',
+    period: 'month',
+    features: [
+      '10,000 AI Credit',
+      'Highly Personalised Resume',
+      'Highly Personalised Interview',
+      'Unlimited Resume Generate',
+      'Save Unlimited Resume',
+      'Advance Support',
+      'First New Update',
+      'Advance Support'
+    ],
+    buttonText: 'Get Pro',
+    isHighlighted: true
+  },
+  {
+    title: 'Institute / College',
+    price: null,
+    period: null,
+    features: [
+      'Customise User Solution',
+      'Customise AI Credit',
+      'Highly Personalised Resume',
+      'Highly Personalised Interview',
+      'Unlimited Resume Generate',
+      'Save Unlimited Resume',
+      'Advance Support',
+      'First New Update',
+      'Data Protection'
+    ],
+    buttonText: 'Contact Us',
+    isHighlighted: false
+  }
+] as const;
 
-  const plans: PricingPlan[] = [
-    {
-      title: 'Basic',
-      price: '₹199',
-      period: 'month',
-      features: [
-        '1000 AI Credit',
-        'Personalised Resume',
-        'Personalised Interview',
-        'Unlimited Resume Generate',
-        'Basic Support'
-      ],
-      buttonText: 'Start Basic',
-      isHighlighted: false
-    },
-    {
-      title: 'Pro',
-      price: '₹499',
-      period: 'month',
-      features: [
-        '10,000 AI Credit',
-        'Highly Personalised Resume',
-        'Highly Personalised Interview',
-        'Unlimited Resume Generate',
-        'Save Unlimited Resume',
-        'Advance Support',
-        'First New Update',
-        'Advance Support'
-      ],
-      buttonText: 'Get Pro',
-      isHighlighted: true
-    },
-    {
-      title: 'Institute / College',
-      features: [
-        'Customise User Solution',
-        'Customise AI Credit',
-        'Highly Personalised Resume',
-        'Highly Personalised Interview',
-        'Unlimited Resume Generate',
-        'Save Unlimited Resume',
-        'Advance Support',
-        'First New Update',
-        'Data Protection'
-      ],
-      buttonText: 'Contact Us',
-      isHighlighted: false
-    }
-  ];
-
+// Use React.FC with explicit return type
+const PricingSection: React.FC = (): React.JSX.Element => {
   return (
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[70%] mx-auto">
@@ -154,47 +162,14 @@ const PricingSection: React.FC = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Choose the plan that&apos;s right for you
           </h2>
-          <div className="flex justify-center items-center space-x-4">
-            <span className={`
-              ${billingCycle === 'monthly' ? 'text-gray-900' : 'text-gray-500'}
-              cursor-pointer
-            `}
-            onClick={() => setBillingCycle('monthly')}
-            >
-              Monthly
-            </span>
-            <div 
-              className="w-12 h-6 bg-gray-200 rounded-full relative cursor-pointer"
-              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-            >
-              <div 
-                className={`
-                  absolute 
-                  top-1 
-                  w-4 
-                  h-4 
-                  bg-blue-500 
-                  rounded-full 
-                  transition-all 
-                  duration-300
-                  ${billingCycle === 'yearly' ? 'right-1' : 'left-1'}
-                `}
-              />
-            </div>
-            <span className={`
-              ${billingCycle === 'yearly' ? 'text-gray-900' : 'text-gray-500'}
-              cursor-pointer
-            `}
-            onClick={() => setBillingCycle('yearly')}
-            >
-              Yearly
-            </span>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {plans.map((plan, index) => (
-            <PricingCard key={index} {...plan} />
+          {PRICING_PLANS.map((plan, index) => (
+            <PricingCard 
+              key={`${plan.title}-${index}`} 
+              {...plan} 
+            />
           ))}
         </div>
       </div>

@@ -105,7 +105,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
               © 2025 Applically, INCEPTIA EDTECH LLP.
             </p>
           </div>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a
               href="#"
               aria-label="Facebook"
@@ -141,7 +141,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
             >
               <FaYoutube size={20} />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

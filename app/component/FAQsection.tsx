@@ -18,7 +18,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="border-b border-gray-200 py-4">
+    <div id="faq" className="border-b border-gray-200 py-4">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between text-left text-lg font-medium"

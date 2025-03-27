@@ -48,14 +48,19 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-600 hover:text-blue-600">
-                  FAQ
+                <Link href="/returnandrefund" className="text-gray-600 hover:text-blue-600">
+                  Return and Refund
+                </Link>
+              </li>
+              <li>
+                <Link href="/madeinindia" className="text-gray-600 hover:text-blue-600">
+                  Made in India
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-3">
               <li>
@@ -74,9 +79,9 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4">Interview Questions</h3>
             <ul className="space-y-3">
               <li>
@@ -85,7 +90,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="pt-6 flex flex-col md:flex-row justify-between items-center">

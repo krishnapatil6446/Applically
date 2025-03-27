@@ -20,7 +20,7 @@ const PricingCard: React.FC<PricingPlan> = ({
   isHighlighted = false 
 }) => {
   return (
-    <div className={`
+    <div id='pricing' className={`
       rounded-lg 
       border 
       ${isHighlighted 

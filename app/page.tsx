@@ -10,8 +10,6 @@ import Bentogrid from "./component/Bentogrid";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      
-      <Navbar />
       <Hero />
       <TimelineSection />
       <Bentogrid />

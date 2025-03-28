@@ -5,7 +5,10 @@ import PricingSection from "./component/PricingSection";
 import { HoverEffect } from "./component/CardHover";
 import { StickyScroll } from "./component/Sticky-scroll-revel";
 import IntegrationsSection from "./component/IntegrationSection";
-import { BentoGrid } from "./component/Bentogrid";
+// import { BentoGrid } from "./component/Bentogrid";
+// import { BentoGridItem } from "./component/Bentogrid";
+import { BentoGridSecondDemo } from "./BentoTest/page";
+//import { TextGenerateEffect } from "./component/TextGenerateEffect";
 
 export default function Home() {
   const stickyScrollContent = [
@@ -133,7 +136,27 @@ export default function Home() {
           <StickyScroll content={stickyScrollContent} />
         </div>
       </section>
-      <BentoGrid/>
+
+
+      {/*BentoGrid */}
+
+      {/* Bento Grid Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Explore Applically's Unique Features
+          </h2>
+          <BentoGridSecondDemo />
+        </div>
+      </section>
+      
+      {/* <section className="container mx-auto px-4 py-12 text-center">
+        <TextGenerateEffect
+         words = "Krishna Patil"
+          className="max-w-4xl mx-auto"
+        />
+      </section> */}
+
       <IntegrationsSection/>
       <PricingSection />
       <FAQSection/>

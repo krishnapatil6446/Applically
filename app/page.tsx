@@ -7,7 +7,7 @@ import { StickyScroll } from "./component/Sticky-scroll-revel";
 import IntegrationsSection from "./component/IntegrationSection";
 // import { BentoGrid } from "./component/Bentogrid";
 // import { BentoGridItem } from "./component/Bentogrid";
-import { BentoGridSecondDemo } from "./BentoTest/page";
+import { BentoGridSecondDemo } from "./component/BentoTest";
 //import { TextGenerateEffect } from "./component/TextGenerateEffect";
 
 export default function Home() {

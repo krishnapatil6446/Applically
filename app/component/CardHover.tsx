@@ -22,14 +22,14 @@ export const HoverEffect = ({
   const displayItems = items.slice(0, 5);
 
   return (
-    <div className={cn("flex flex-col gap-6 py-10", className)}>
-      {/* First row with 3 cards */}
-      <div className="flex gap-6">
+    <div className={cn("flex flex-col gap-6 py-10 w-full", className)}>
+      {/* First row - responsive: stacks on mobile, flex on larger screens */}
+      <div className="flex flex-col md:flex-row gap-6">
         {displayItems.slice(0, 3).map((item, idx) => (
           <Link
             href={item?.link}
             key={`row1-${idx}`}
-            className="relative group block p-2 flex-1"
+            className="relative group block p-2 flex-1 min-h-40"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -58,13 +58,13 @@ export const HoverEffect = ({
         ))}
       </div>
       
-      {/* Second row with 2 cards centered horizontally */}
-      <div className="flex justify-center gap-6">
+      {/* Second row - responsive: stacks on mobile, centered on larger screens */}
+      <div className="flex flex-col md:flex-row md:justify-center gap-6">
         {displayItems.slice(3, 5).map((item, idx) => (
           <Link
             href={item?.link}
             key={`row2-${idx}`}
-            className="relative group block p-2 w-1/3"
+            className="relative group block p-2 w-full md:w-1/3 min-h-40"
             onMouseEnter={() => setHoveredIndex(idx + 3)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -106,12 +106,12 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-blue-100 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-2 overflow-hidden bg-blue-100 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-1 md:p-2">{children}</div>
       </div>
     </div>
   );
@@ -126,7 +126,7 @@ export const CardTitle = ({
 }) => {
   return (
     <h4
-      className={cn("text-black-100 font-bold tracking-wide mt-4", className)}
+      className={cn("text-black-100 font-bold text-center tracking-wide mt-2 md:mt-4 text-sm md:text-base", className)}
     >
       {children}
     </h4>
@@ -143,7 +143,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-2 md:mt-8 text-zinc-400 tracking-wide leading-relaxed text-xs md:text-sm text-center",
         className
       )}
     >

@@ -12,6 +12,9 @@ import { BentoGridSecondDemo } from "./component/BentoTest";
 import { InfiniteMovingCards } from "./component/InfiniteMovingCards";
 
 export default function Home() {
+
+//STICKYSCROLLCONTENT
+
   const stickyScrollContent = [
     {
       title: "AI-Powered Interview Preparation",
@@ -84,6 +87,10 @@ export default function Home() {
     },
   ];
 
+
+//TESTIMONIALS
+
+
   const testimonials = [
     {
       quote:
@@ -128,7 +135,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-8">
             Where does Applically help you in Job Quest?
           </h2>
-          <HoverEffect
+          <HoverEffect className="justify-center"
             items={[
               {
                 title: "To Create Winning Resume with AI",

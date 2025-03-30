@@ -9,6 +9,7 @@ import IntegrationsSection from "./component/IntegrationSection";
 // import { BentoGridItem } from "./component/Bentogrid";
 import { BentoGridSecondDemo } from "./component/BentoTest";
 //import { TextGenerateEffect } from "./component/TextGenerateEffect";
+import { InfiniteMovingCards } from "./component/InfiniteMovingCards";
 
 export default function Home() {
   const stickyScrollContent = [
@@ -83,51 +84,87 @@ export default function Home() {
     },
   ];
 
+  const testimonials = [
+    {
+      quote:
+        "Applically transformed my job search. I landed interviews at three top tech companies after just two weeks of preparation.",
+      name: "Sarah Johnson",
+      title: "Software Engineer at TechCorp",
+    },
+    {
+      quote:
+        "The AI interview practice sessions were incredibly realistic. I felt much more confident going into my actual interviews.",
+      name: "Michael Chen",
+      title: "Product Manager at StartupX",
+    },
+    {
+      quote:
+        "After struggling with interviews for months, Applically helped me identify my weak points and improve rapidly.",
+      name: "Emma Rodriguez",
+      title: "Data Scientist at AnalyticsPro",
+    },
+    {
+      quote:
+        "The personalized feedback after each practice interview was invaluable. I could see my improvement day by day.",
+      name: "David Kim",
+      title: "UX Designer at CreativeTech",
+    },
+    {
+      quote:
+        "I recommend Applically to all my friends looking for jobs. It's like having a personal interview coach available 24/7.",
+      name: "Alex Thompson",
+      title: "Marketing Manager at BrandBoost",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <Hero />
       <TimelineSection />
 
       {/* Hover Effect Section */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
-            Where does Applically help you in your JobQuest?
+            Where does Applically help you in Job Quest?
           </h2>
           <HoverEffect
             items={[
               {
-                title: "Stripe",
+                title: "To Create Winning Resume with AI",
                 description:
-                  "Seamless payment integration for global businesses.",
-                link: "https://stripe.com",
+                  "Applically helps you builds a personalized, ATS-friendly Professionally designed Resume to get you noticed. Creating excellent resume is the first step toward landing your dream job!",
+                link: "",
               },
               {
-                title: "Google Cloud",
-                description: "Powerful cloud computing and AI services.",
-                link: "https://cloud.google.com",
-              },
-              {
-                title: "Slack",
-                description: "Collaborative communication platform for teams.",
-                link: "https://slack.com",
-              },
-              {
-                title: "Notion",
+                title: "To Make Your Resume Highly Personalized",
                 description:
-                  "All-in-one workspace for note-taking and collaboration.",
-                link: "https://notion.so",
+                  "Let Applically’s AI make your resume Personalised for You and the Job you applying. Build a resume which grabs recruiters’ attention. no guesswork, just results.",
+                link: "",
               },
               {
-                title: "Zapier",
-                description: "Automate workflows between your favorite apps.",
-                link: "https://zapier.com",
+                title: "To Beat the ATS and Get Noticed",
+                description:
+                  "Applically optimizes your resume to pass Applicant Tracking Systems with 85+ Average Score, ensuring it reaches hiring managers. Make your resume ATS-Proof ",
+                link: "",
               },
               {
-                title: "Figma",
-                description: "Collaborative design tool for teams.",
-                link: "https://figma.com",
+                title: "To Ace Your Next Interview with AI Coaching",
+                description:
+                  "Applically’s AI-powered technology offers mock interviews tailored to your skill and the role you applying. Build confidence and give interview's fully from now. ",
+                link: "",
               },
+              {
+                title: "To Get Instant Insights & Feedback",
+                description:
+                  "Applically’s AI-powered interview analytics offers you real-time Insights on your responses. From communication clarity to response effectiveness, get actionable insights and level up your interview game.",
+                link: "/",
+              },
+              // {
+              //   title: "Figma",
+              //   description: "Collaborative design tool for teams.",
+              //   link: "https://figma.com",
+              // },
             ]}
           />
         </div>
@@ -163,7 +200,28 @@ export default function Home() {
       </section> */}
 
       <IntegrationsSection />
+
       <PricingSection />
+      {/* Testimonials Section with InfiniteMovingCards */}
+      <section className="py-16 ">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            What Our Users Say
+          </h2>
+          <InfiniteMovingCards
+            items={testimonials}
+            direction="left"
+            speed="normal"
+            pauseOnHover={true}
+          />
+          <InfiniteMovingCards
+            items={testimonials}
+            direction="left"
+            speed="normal"
+            pauseOnHover={true}
+          />
+        </div>
+      </section>
       <FAQSection />
     </div>
   );

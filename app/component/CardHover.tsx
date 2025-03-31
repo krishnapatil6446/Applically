@@ -22,7 +22,7 @@ export const HoverEffect = ({
   const displayItems = items.slice(0, 5);
 
   return (
-    <div className={cn("flex flex-col gap-6 py-10 w-full", className)}>
+    <div className={cn("flex flex-col gap-2 sm:gap-4 md:gap-6 py-10 w-full", className)}>
       {/* First row - responsive: stacks on mobile, flex on larger screens */}
       <div className="flex flex-col md:flex-row gap-6">
         {displayItems.slice(0, 3).map((item, idx) => (

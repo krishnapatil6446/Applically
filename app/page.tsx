@@ -138,31 +138,31 @@ export default function Home() {
           <HoverEffect className="justify-center"
             items={[
               {
-                title: "To Create Winning Resume with AI",
+                title: "To Create Job Winning Resume",
                 description:
                   "Applically helps you builds a personalized, ATS-friendly Professionally designed Resume to get you noticed. Creating excellent resume is the first step toward landing your dream job!",
                 link: "",
               },
               {
-                title: "To Make Your Resume Highly Personalized",
+                title: "To Make Highly Personalised Resume",
                 description:
                   "Let Applically’s AI make your resume Personalised for You and the Job you applying. Build a resume which grabs recruiters’ attention. no guesswork, just results.",
                 link: "",
               },
               {
-                title: "To Beat the ATS and Get Noticed",
+                title: "To Beat ATS & Get Noticed",
                 description:
                   "Applically optimizes your resume to pass Applicant Tracking Systems with 85+ Average Score, ensuring it reaches hiring managers. Make your resume ATS-Proof ",
                 link: "",
               },
               {
-                title: "To Ace Your Next Interview with AI Coaching",
+                title: "To Ace Your Next Interview ",
                 description:
                   "Applically’s AI-powered technology offers mock interviews tailored to your skill and the role you applying. Build confidence and give interview's fully from now. ",
                 link: "",
               },
               {
-                title: "To Get Instant Insights & Feedback",
+                title: "To Get Instant Insight & Feedback",
                 description:
                   "Applically’s AI-powered interview analytics offers you real-time Insights on your responses. From communication clarity to response effectiveness, get actionable insights and level up your interview game.",
                 link: "/",

@@ -1,15 +1,10 @@
 "use client";
 import InfiniteLogoMarquee from "./InfiniteLogoMarquee";
-import VideoPlaceholder from "./VideoPlaceholder";
-
+import ResumeStats from "./ResumeStats";
 
 const Hero = () => {
-
-  
-
-
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#f8f9fa] to-white dark:from-[#0a0a0a] dark:to-[#121212] py-16 md:py-24">
+    <section className="relative w-full bg-gradient-to-b from-[#ffffff] to-white dark:from-[#0a0a0a] dark:to-[#121212] py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
@@ -45,16 +40,40 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Right side - Video Placeholder */}
-          <div className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl">
-            <VideoPlaceholder />
-            <div className="absolute bottom-4 left-0 right-0 text-center z-20">
-              <p className="text-sm text-gray-600 dark:text-gray-400 bg-white/90 dark:bg-black/90 p-2 mx-auto rounded-lg shadow-lg max-w-md">
-                Interview Copilot generating actionable guidance for interviews
-                in real-time
-              </p>
-            </div>
-          </div>
+{/* Right side - Statistics Display */}
+<div className="flex flex-col space-y-6">
+  {/* First box - Top stats */}
+  {/* <div className="bg-white rounded-lg p-6 ">
+
+    <div className="flex flex-row justify-between items-start">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-black">↑ 38%</h3>
+        <p className=" text-sm">more interviews</p>
+      </div>
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-black">↑ 23%</h3>
+        <p className="text-gray-700 text-sm">more likely to get a job offer</p>
+      </div>
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-black">↑ 38%</h3>
+        <p className="text-gray-700 text-sm">more interviews</p>
+      </div>
+    </div>
+    <div className="flex justify-center mt-6">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-black">↑ 23%</h3>
+        <p className="text-gray-700 text-sm">more likely to get a job offer</p>
+      </div>
+    </div>
+  </div> */}
+  
+  {/* Second box - Resume Stats */}
+  <div className="bg-white rounded-lg p-6 ">
+    <ResumeStats />
+
+  </div>
+</div>
+
         </div>
 
         {/* Companies section */}
@@ -67,13 +86,9 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      {/* Company Marquee */}
       
-
-
-    {/* Infinite Scroll */}
-    <InfiniteLogoMarquee></InfiniteLogoMarquee>
+      {/* Infinite Scroll */}
+      <InfiniteLogoMarquee />
     </section>
   );
 };

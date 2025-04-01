@@ -27,11 +27,7 @@ const LogoSectionWithHeading: React.FC = () => {
   return (
     <div className="w-full py-12">
       {/* Integrations heading with exact styling */}
-      <div className="text-center ">
-        <span className="text-blue-500 font-semibold uppercase tracking-wide">
-          TRUSTED AND USED BY INSTITUTES
-        </span>
-      </div>
+      
       
       {/* Trusted and Used by Institutes heading */}
       

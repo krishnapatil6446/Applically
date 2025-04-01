@@ -1,7 +1,7 @@
 "use client";
-
+import InfiniteLogoMarquee from "./InfiniteLogoMarquee";
 import ResumeStats from "./ResumeStats";
-import Image from "next/image";
+
 
 const Hero = () => {
   return (
@@ -9,42 +9,43 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
+
           <div className="flex flex-col space-y-6 max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Unlock Your Interview Superpowers with AI,{" "}
+            <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Unlock Your Superpowers with,{" "}
               <span className="text-blue-600 dark:text-blue-400">
-                Your AI-Powered Interview Copilot
+                Your All-in-One Carrier Copilot Resume--Interview
               </span>
             </h1>
 
             <div className="flex flex-col md:flex-row gap-4 md:gap-8 mt-4">
               <div className="flex items-center">
                 <span className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                  250K+
+                  8K+
                 </span>
                 <span className="ml-2 text-gray-600 dark:text-gray-400">
-                  Offers Received
+                  Resume Created
                 </span>
               </div>
               <div className="flex items-center">
                 <span className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                  1.2M+
+                  3.2K+
                 </span>
                 <span className="ml-2 text-gray-600 dark:text-gray-400">
-                  Interviews Aced
+                  Interviews Done
                 </span>
               </div>
             </div>
 
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-200 w-fit">
-              Activate AI Interview Mode Now
+              Activate Applically AI Now
             </button>
           </div>
 
           {/* Right side - Statistics Display */}
           <div className="flex flex-col space-y-6">
             {/* Image above the Resume Stats */}
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <div className="relative w-full h-64 md:h-80">
                 <Image 
                   src="/api/placeholder/600/400" 
@@ -54,8 +55,8 @@ const Hero = () => {
                   priority
                 />
               </div>
-            </div>
-            
+            </div> */}
+
             {/* Resume Stats box */}
             <div className="bg-white rounded-lg p-6">
               <ResumeStats />
@@ -66,16 +67,16 @@ const Hero = () => {
         {/* Companies section */}
         <div className="mt-16 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            300,000+ offers from the most exciting companies and organizations
+            200+ people from the most exciting companies and organizations
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            From Day One to Final Rounds
+            Approves Applically as Best Choice
           </p>
         </div>
       </div>
-      
-      {/* Infinite Scroll */}
 
+      {/* Infinite Scroll */}
+      <InfiniteLogoMarquee />
     </section>
   );
 };

@@ -1,175 +1,173 @@
-"use client";
+import React from "react";
 
-import React from 'react';
+const PricingTable = () => {
+  const plans = [
+    {
+      title: "Existing Components",
+      tagline: "",
+      price: "Free",
+      period: "",
+      description:
+        "All the components that are freely available on the website are free to use.",
+      features: [
+        "A growing library of awesome components",
+        "React / Next.js / Tailwind CSS code",
+        "Serves a wide variety of audience.",
+        "MIT Licence. Personal or commercial projects.",
+        "Contact over chat for support",
+      ],
+      buttonText: "Browse Components",
+      highlighted: false,
+    },
+    {
+      title: "Custom Components",
+      tagline: "pause or cancel anytime",
+      price: "$4995",
+      period: "/mo",
+      description:
+        "Standalone components tailored to your needs and easily integrated. Perfect for website elements or sections.",
+      features: [
+        "As many components as possible in a month",
+        "React / Next.js / Tailwind CSS code",
+        "Design + Development",
+        "Unlimited Revisions",
+        "24-hour support response time",
+        "Private communication channel",
+        "4-7 days turnaround time",
+        "Pause or cancel anytime",
+      ],
+      buttonText: "Buy Now",
+      highlighted: false,
+    },
+    {
+      title: "Pages",
+      tagline: "pause or cancel anytime",
+      price: "$6995",
+      period: "/mo",
+      description:
+        "Best for early-stage startups and businesses that need a marketing site and ongoing developmental work.",
+      features: [
+        "One request / page at a time",
+        "React / Next.js / Tailwind CSS code",
+        "Design + Development",
+        "Unlimited Revisions",
+        "CMS integration",
+        "Search Engine Optimization",
+        "24-hour support response time",
+        "Private communication channel",
+        "7-10 days turnaround time",
+        "Pause or cancel anytime",
+      ],
+      buttonText: "Buy Now",
+      highlighted: true,
+    },
+    {
+      title: "Multi Page Website",
+      tagline: "starts at",
+      price: "$19,499",
+      period: "",
+      description:
+        "Best for small businesses and startups that need a performant website that looks great and converts visitors to customers.",
+      features: [
+        "Multi-page landing page website",
+        "Web Apps and SaaS Development",
+        "AI Apps development",
+        "Design + Development",
+        "24-hour support response time",
+        "Private communication channel",
+        "Unlimited Revisions",
+        "Negotiable delivery time",
+      ],
+      buttonText: "Contact Us",
+      highlighted: false,
+    },
+  ];
 
-// Explicitly define the interface with optional properties
-interface PricingPlan {
-  title: string;
-  price?: string | null;
-  period?: string | null;
-  features: readonly string[];
-  buttonText: string;
-  isHighlighted?: boolean;
-}
-
-// Explicitly type the PricingCard component props
-const PricingCard: React.FC<PricingPlan> = ({ 
-  title, 
-  price = null, 
-  period = null, 
-  features, 
-  buttonText, 
-  isHighlighted = false 
-}) => {
   return (
-    <div 
-      id='pricing' 
-      className={`
-        rounded-lg 
-        border 
-        ${isHighlighted 
-          ? 'border-blue-500 shadow-2xl scale-105 z-10 bg-blue-50' 
-          : 'border-gray-200 bg-white'
-        } 
-        p-6 
-        flex 
-        flex-col 
-        w-full 
-        transition-all 
-        duration-300
-      `}
-    >
-      <div className="flex justify-between items-center mb-6">
-        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-        {isHighlighted && (
-          <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
-            Popular
-          </span>
-        )}
-      </div>
-
-      {price && (
-        <div className="mb-6">
-          <span className="text-4xl font-bold text-gray-900">{price}</span>
-          {period && (
-            <span className="text-gray-500 ml-1">/ {period}</span>
-          )}
-        </div>
-      )}
-
-      <ul className="space-y-4 mb-6 flex-grow">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <svg 
-              className="w-5 h-5 mr-3 text-blue-500" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              xmlns="http://www.w3.org/2000/svg"
+    <div className="w-full flex justify-center px-4 py-8">
+      <div className="w-full max-w-6xl">
+        {/* Modified this container to better center cards on mobile */}
+        <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 md:gap-3">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`flex-1 w-full max-w-xs md:max-w-72 rounded-lg p-4 flex flex-col ${
+                plan.highlighted
+                  ? "bg-blue-900 text-white"
+                  : "bg-white border border-gray-200"
+              }`}
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M5 13l4 4L19 7" 
-              />
-            </svg>
-            {feature}
-          </li>
-        ))}
-      </ul>
+              <div className="mb-4">
+                <h3
+                  className={`text-lg font-medium ${
+                    plan.highlighted ? "text-blue-100" : "text-blue-600"
+                  }`}
+                >
+                  {plan.title}
+                </h3>
+                {plan.tagline && (
+                  <p className="text-xs mt-1 text-gray-500">{plan.tagline}</p>
+                )}
+              </div>
 
-      <button 
-        type="button"
-        className={`
-          w-full 
-          py-3 
-          rounded-lg 
-          font-semibold 
-          transition-colors 
-          duration-300
-          ${isHighlighted 
-            ? 'bg-blue-500 hover:bg-blue-600 text-white' 
-            : 'bg-blue-50 hover:bg-blue-100 text-blue-600'
-          }
-        `}
-      >
-        {buttonText}
-      </button>
-    </div>
-  );
-};
+              <div className="flex items-baseline mb-4">
+                <span className="text-3xl font-bold">{plan.price}</span>
+                {plan.period && (
+                  <span className="ml-1 text-lg">{plan.period}</span>
+                )}
+              </div>
 
-// Define plans as a const array with explicit typing
-const PRICING_PLANS: readonly PricingPlan[] = [
-  {
-    title: 'Basic',
-    price: '₹199',
-    period: 'month',
-    features: [
-      '1000 AI Credit',
-      'Personalised Resume',
-      'Personalised Interview',
-      'Unlimited Resume Generate',
-      'Basic Support'
-    ],
-    buttonText: 'Start Basic',
-    isHighlighted: false
-  },
-  {
-    title: 'Pro',
-    price: '₹499',
-    period: 'month',
-    features: [
-      '10,000 AI Credit',
-      'Highly Personalised Resume',
-      'Highly Personalised Interview',
-      'Unlimited Resume Generate',
-      'Save Unlimited Resume',
-      'Advance Support',
-      'First New Update',
-      'Advance Support'
-    ],
-    buttonText: 'Get Pro',
-    isHighlighted: true
-  },
-  {
-    title: 'Institute / College',
-    price: null,
-    period: null,
-    features: [
-      'Customise User Solution',
-      'Customise AI Credit',
-      'Highly Personalised Resume',
-      'Highly Personalised Interview',
-      'Unlimited Resume Generate',
-      'Save Unlimited Resume',
-      'Advance Support',
-      'First New Update',
-      'Data Protection'
-    ],
-    buttonText: 'Contact Us',
-    isHighlighted: false
-  }
-] as const;
+              <p
+                className={`mb-4 text-sm ${
+                  plan.highlighted ? "text-blue-100" : "text-gray-600"
+                }`}
+              >
+                {plan.description}
+              </p>
 
-// Use React.FC with explicit return type
-const PricingSection: React.FC = (): React.JSX.Element => {
-  return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[70%] mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Choose the plan that&apos;s right for you
-          </h2>
-        </div>
+              <ul className="space-y-2 mb-6 flex-1 text-sm">
+                {plan.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <div
+                      className={`rounded-full p-1 mr-2 flex-shrink-0 ${
+                        plan.highlighted ? "bg-blue-700" : "bg-blue-100"
+                      }`}
+                    >
+                      <svg
+                        className={`w-3 h-3 ${
+                          plan.highlighted ? "text-blue-200" : "text-blue-600"
+                        }`}
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      className={
+                        plan.highlighted ? "text-blue-100" : "text-gray-600"
+                      }
+                    >
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {PRICING_PLANS.map((plan, index) => (
-            <PricingCard 
-              key={`${plan.title}-${index}`} 
-              {...plan} 
-            />
+              <button
+                className={`w-full py-2 px-4 rounded-lg font-medium text-sm ${
+                  plan.highlighted
+                    ? "bg-blue-400 text-blue-900 hover:bg-blue-300"
+                    : "bg-white border border-blue-600 text-blue-600 hover:bg-blue-50"
+                } transition-colors duration-150`}
+              >
+                {plan.buttonText}
+              </button>
+            </div>
           ))}
         </div>
       </div>
@@ -177,4 +175,4 @@ const PricingSection: React.FC = (): React.JSX.Element => {
   );
 };
 
-export default PricingSection;
+export default PricingTable;

@@ -284,6 +284,11 @@ export default function Home() {
           />
         </div>
       </section>
+      <div className="text-center ">
+        <span className="text-blue-500 font-semibold uppercase tracking-wide">
+          TRUSTED AND USED BY INSTITUTES
+        </span>
+      </div>
       <InfiniteLogoMarquee />
       <FAQSection />
     </div>

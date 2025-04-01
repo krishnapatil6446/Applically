@@ -21,7 +21,7 @@ const ResumeStats = () => {
         <div className="flex flex-row w-full justify-between">
           {topRowStats.map((stat, index) => (
             <div key={`top-${index}`} className="text-center px-2">
-              <h3 className="text-3xl font-bold text-blue-600 dark:text-blue-400">{stat.number}</h3>
+              <h3 className="text-4xl font-bold text-blue-600 dark:text-blue-400">{stat.number}</h3>
               <p className="text-gray-600 dark:text-gray-400 mt-1 text-xs">{stat.description}</p>
             </div>
           ))}

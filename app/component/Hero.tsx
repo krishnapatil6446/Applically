@@ -1,6 +1,7 @@
 "use client";
 import InfiniteLogoMarquee from "./InfiniteLogoMarquee";
 import ResumeStats from "./ResumeStats";
+import Image from "next/image";
 
 const Hero = () => {
   return (

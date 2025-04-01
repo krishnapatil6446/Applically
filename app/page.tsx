@@ -3,93 +3,129 @@ import TimelineSection from "./component/TimelineSection";
 import FAQSection from "./component/FAQsection";
 import PricingSection from "./component/PricingSection";
 import { HoverEffect } from "./component/CardHover";
-import { StickyScroll } from "./component/Sticky-scroll-revel";
 import IntegrationsSection from "./component/IntegrationSection";
+import StepByStepProcess,{Step} from "./component/StepByStepProcess";
+// import { StickyScroll } from "./component/Sticky-scroll-revel";
 // import { BentoGrid } from "./component/Bentogrid";
 // import { BentoGridItem } from "./component/Bentogrid";
 import { BentoGridSecondDemo } from "./component/BentoTest";
+
 //import { TextGenerateEffect } from "./component/TextGenerateEffect";
 import { InfiniteMovingCards } from "./component/InfiniteMovingCards";
 
 export default function Home() {
+  // STEPBYSTEPPROCESS
 
-//STICKYSCROLLCONTENT
-
-  const stickyScrollContent = [
+  const steps: Step[] = [
     {
-      title: "AI-Powered Interview Preparation",
-      description:
-        "Get personalized coaching tailored to your career stage and industry.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center">
-          <img
-            src="https://cdn.pixabay.com/photo/2017/01/13/09/23/magic-cube-1976725_1280.jpg"
-            alt="Interview Preparation"
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-      ),
+      title: "Step 1",
+      subtitle: "Craft a Job-Winning Resume",
+      quote: "Your resume is your first impression—make it unforgettable!",
+      points: ["Tailored Perfection", "Mastering ATS", "Professionally Draft"],
+      tagline: "Stand out. Impress recruiters. Open doors.",
+      imagePath: "step1.png", // Replace with your actual image filename
     },
     {
-      title: "Comprehensive Skill Assessment",
-      description:
-        "Identify your strengths and areas for improvement with in-depth analysis.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center">
-          <img
-            src="https://cdn.pixabay.com/photo/2017/09/08/02/24/chess-2727443_1280.jpg"
-            alt="Skill Assessment"
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-      ),
+      title: "Step 2",
+      subtitle: "Apply Strategically",
+      quote: "Quality over quantity—target the right opportunities!",
+      points: [
+        "Research Companies",
+        "Customize Applications",
+        "Follow Up Effectively",
+      ],
+      tagline: "Apply smart. Target well. Maximize chances.",
+      imagePath: "step1.png", // Replace with your actual image filename
     },
     {
-      title: "Real-Time Feedback",
-      description:
-        "Receive instant, actionable insights to enhance your interview performance.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center">
-          <img
-            src="https://cdn.pixabay.com/photo/2016/11/29/03/32/golf-ball-1867079_1280.jpg"
-            alt="Real-Time Feedback"
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-      ),
-    },
-    {
-      title: "Real-Time Feedback",
-      description:
-        "Receive instant, actionable insights to enhance your interview performance.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center">
-          <img
-            src="https://cdn.pixabay.com/photo/2022/12/01/12/33/piano-7629023_1280.jpg"
-            alt="Real-Time Feedback"
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-      ),
-    },
-    {
-      title: "",
-      description: "",
-      content: (
-        <div className="h-full w-full flex items-center justify-center">
-          <img
-            src="https://cdn.pixabay.com/photo/2022/12/01/12/33/piano-7629023_1280.jpg"
-            alt="Real-Time Feedback"
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-      ),
+      title: "Step 3",
+      subtitle: "Ace Your Interviews",
+      quote: "Preparation meets opportunity—show them your best self!",
+      points: [
+        "Research Thoroughly",
+        "Practice Responses",
+        "Ask Smart Questions",
+      ],
+      tagline: "Prepare well. Connect genuinely. Close strong.",
+      imagePath: "step1.png", // Replace with your actual image filename
     },
   ];
 
+  //STICKYSCROLLCONTENT
 
-//TESTIMONIALS
+  // const stickyScrollContent = [
+  //   {
+  //     title: "AI-Powered Interview Preparation",
+  //     description:
+  //       "Get personalized coaching tailored to your career stage and industry.",
+  //     content: (
+  //       <div className="h-full w-full flex items-center justify-center">
+  //         <img
+  //           src="https://cdn.pixabay.com/photo/2017/01/13/09/23/magic-cube-1976725_1280.jpg"
+  //           alt="Interview Preparation"
+  //           className="w-full h-full object-cover rounded-md"
+  //         />
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     title: "Comprehensive Skill Assessment",
+  //     description:
+  //       "Identify your strengths and areas for improvement with in-depth analysis.",
+  //     content: (
+  //       <div className="h-full w-full flex items-center justify-center">
+  //         <img
+  //           src="https://cdn.pixabay.com/photo/2017/09/08/02/24/chess-2727443_1280.jpg"
+  //           alt="Skill Assessment"
+  //           className="w-full h-full object-cover rounded-md"
+  //         />
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     title: "Real-Time Feedback",
+  //     description:
+  //       "Receive instant, actionable insights to enhance your interview performance.",
+  //     content: (
+  //       <div className="h-full w-full flex items-center justify-center">
+  //         <img
+  //           src="https://cdn.pixabay.com/photo/2016/11/29/03/32/golf-ball-1867079_1280.jpg"
+  //           alt="Real-Time Feedback"
+  //           className="w-full h-full object-cover rounded-md"
+  //         />
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     title: "Real-Time Feedback",
+  //     description:
+  //       "Receive instant, actionable insights to enhance your interview performance.",
+  //     content: (
+  //       <div className="h-full w-full flex items-center justify-center">
+  //         <img
+  //           src="https://cdn.pixabay.com/photo/2022/12/01/12/33/piano-7629023_1280.jpg"
+  //           alt="Real-Time Feedback"
+  //           className="w-full h-full object-cover rounded-md"
+  //         />
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     title: "",
+  //     description: "",
+  //     content: (
+  //       <div className="h-full w-full flex items-center justify-center">
+  //         <img
+  //           src="https://cdn.pixabay.com/photo/2022/12/01/12/33/piano-7629023_1280.jpg"
+  //           alt="Real-Time Feedback"
+  //           className="w-full h-full object-cover rounded-md"
+  //         />
+  //       </div>
+  //     ),
+  //   },
+  // ];
 
+  //TESTIMONIALS
 
   const testimonials = [
     {
@@ -135,7 +171,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-8">
             Where does Applically help you in Job Quest?
           </h2>
-          <HoverEffect className="justify-center"
+          <HoverEffect
+            className="justify-center"
             items={[
               {
                 title: "To Create Job Winning Resume",
@@ -178,12 +215,23 @@ export default function Home() {
       </section>
 
       {/* Sticky Scroll Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             How Applically Helps You?
           </h2>
           <StickyScroll content={stickyScrollContent} />
+        </div>
+      </section> */}
+
+      {/* Add the StepByStepProcess component here */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <StepByStepProcess
+            heading="How it works"
+            subheading="Your journey to landing your dream job with Applically"
+            steps={steps}
+          />
         </div>
       </section>
 

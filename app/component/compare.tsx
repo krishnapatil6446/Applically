@@ -80,7 +80,8 @@ export const Compare = ({
   }
 
   const handleStart = useCallback(
-    // Remove the unused parameter by removing the leading underscore
+    // Using eslint-disable-next-line to suppress the specific error
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     (_clientX: number) => {
       if (slideMode === "drag") {
         setIsDragging(true);

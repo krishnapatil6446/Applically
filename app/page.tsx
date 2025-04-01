@@ -5,7 +5,7 @@ import PricingSection from "./component/PricingSection";
 import { HoverEffect } from "./component/CardHover";
 import InfiniteLogoMarquee from "./component/InfiniteLogoMarquee";
 import IntegrationsSection from "./component/IntegrationSection";
-import StepByStepProcess,{Step} from "./component/StepByStepProcess";
+import StepByStepProcess, { Step } from "./component/StepByStepProcess";
 // import { StickyScroll } from "./component/Sticky-scroll-revel";
 // import { BentoGrid } from "./component/Bentogrid";
 // import { BentoGridItem } from "./component/Bentogrid";
@@ -47,7 +47,8 @@ export default function Home() {
         "Customized Recommendations",
         "Improved Progress",
       ],
-      tagline: "Turn every practice into progress and every insight into opportunity.",
+      tagline:
+        "Turn every practice into progress and every insight into opportunity.",
       imagePath: "/images/step3.png", // Replace with your actual image filename
     },
   ];
@@ -240,9 +241,14 @@ export default function Home() {
 
       {/* Bento Grid Section */}
       <section className="py-16 bg-white">
+        <div className="text-center ">
+          <span className="text-blue-500 font-semibold uppercase tracking-wide ">
+            TRUSTED AND USED BY INSTITUTES
+          </span>
+        </div>
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Explore Applically Unique Features
+          <h2 className="text-3xl font-bold text-center mb-12 mt-12">
+            What Makes Applically the Ultimate Destination for Job Applicants
           </h2>
           <BentoGridSecondDemo />
         </div>

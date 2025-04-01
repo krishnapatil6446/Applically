@@ -5,8 +5,6 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type {
   Container,
   SingleOrMultiple,
-  RecursivePartial,
-  IResizeEvent,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/lib/utils";

@@ -36,8 +36,8 @@ const ProcessStep: React.FC<Step> = ({ title, subtitle, quote, points, tagline, 
       </div>
       
       <h2 className="text-2xl font-bold mb-2">{title}</h2>
-      <h3 className="text-xl font-bold mb-2">{subtitle}</h3>
-      <p className="italic text-center mb-4">"{quote}"</p>
+      <h3 className="text-xl font-bold w-full text-center mb-2">{subtitle}</h3>
+      <p className="italic text-center w-full  mb-4">"{quote}"</p>
       
       <div className="space-y-2">
         {points.map((point, index) => (
@@ -45,7 +45,7 @@ const ProcessStep: React.FC<Step> = ({ title, subtitle, quote, points, tagline, 
         ))}
       </div>
       
-      <div className="flex items-center mt-6">
+      <div className="flex items-center justify-center w-full text-center mt-6">
         <span className="text-pink-500 mr-2">🎯</span>
         <p className="italic">{tagline}</p>
       </div>

@@ -1,5 +1,5 @@
 "use client";
-import InfiniteLogoMarquee from "./InfiniteLogoMarquee";
+
 import ResumeStats from "./ResumeStats";
 import Image from "next/image";
 
@@ -41,40 +41,26 @@ const Hero = () => {
             </button>
           </div>
 
-{/* Right side - Statistics Display */}
-<div className="flex flex-col space-y-6">
-  {/* First box - Top stats */}
-  {/* <div className="bg-white rounded-lg p-6 ">
-
-    <div className="flex flex-row justify-between items-start">
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-black">↑ 38%</h3>
-        <p className=" text-sm">more interviews</p>
-      </div>
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-black">↑ 23%</h3>
-        <p className="text-gray-700 text-sm">more likely to get a job offer</p>
-      </div>
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-black">↑ 38%</h3>
-        <p className="text-gray-700 text-sm">more interviews</p>
-      </div>
-    </div>
-    <div className="flex justify-center mt-6">
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-black">↑ 23%</h3>
-        <p className="text-gray-700 text-sm">more likely to get a job offer</p>
-      </div>
-    </div>
-  </div> */}
-  
-  {/* Second box - Resume Stats */}
-  <div className="bg-white rounded-lg p-6 ">
-    <ResumeStats />
-
-  </div>
-</div>
-
+          {/* Right side - Statistics Display */}
+          <div className="flex flex-col space-y-6">
+            {/* Image above the Resume Stats */}
+            <div className="flex justify-center">
+              <div className="relative w-full h-64 md:h-80">
+                <Image 
+                  src="/api/placeholder/600/400" 
+                  alt="AI Interview Preparation" 
+                  fill
+                  className="object-cover rounded-lg "
+                  priority
+                />
+              </div>
+            </div>
+            
+            {/* Resume Stats box */}
+            <div className="bg-white rounded-lg p-6">
+              <ResumeStats />
+            </div>
+          </div>
         </div>
 
         {/* Companies section */}
@@ -89,7 +75,7 @@ const Hero = () => {
       </div>
       
       {/* Infinite Scroll */}
-      <InfiniteLogoMarquee />
+
     </section>
   );
 };

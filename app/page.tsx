@@ -3,6 +3,7 @@ import TimelineSection from "./component/TimelineSection";
 import FAQSection from "./component/FAQsection";
 import PricingSection from "./component/PricingSection";
 import { HoverEffect } from "./component/CardHover";
+import InfiniteLogoMarquee from "./component/InfiniteLogoMarquee";
 import IntegrationsSection from "./component/IntegrationSection";
 import StepByStepProcess,{Step} from "./component/StepByStepProcess";
 // import { StickyScroll } from "./component/Sticky-scroll-revel";
@@ -19,7 +20,7 @@ export default function Home() {
   const steps: Step[] = [
     {
       title: "Step 1",
-      subtitle: "Craft a Job-Winning Resume",
+      subtitle: "📝 Craft a Job-Winning Resume",
       quote: "Your resume is your first impression—make it unforgettable!",
       points: ["Tailored Perfection", "Mastering ATS", "Professionally Draft"],
       tagline: "Stand out. Impress recruiters. Open doors.",
@@ -27,27 +28,27 @@ export default function Home() {
     },
     {
       title: "Step 2",
-      subtitle: "Apply Strategically",
-      quote: "Quality over quantity—target the right opportunities!",
+      subtitle: "🎙️ Ace Your Interview with AI Coaching",
+      quote: "💡 Transform nerves into unstoppable confidence!",
       points: [
-        "Research Companies",
-        "Customize Applications",
-        "Follow Up Effectively",
+        "Realistic Simulations",
+        "Instant & Targeted Feedback",
+        "Boost Confidence",
       ],
-      tagline: "Apply smart. Target well. Maximize chances.",
+      tagline: " Walk into interviews knowing you’ve got the winning edge.",
       imagePath: "/images/step2.png", // Replace with your actual image filename
     },
     {
       title: "Step 3",
-      subtitle: "Ace Your Interviews",
-      quote: "Preparation meets opportunity—show them your best self!",
+      subtitle: "📊 Improve with Actionable Insights",
+      quote: "💡 Every session propels you closer to success!",
       points: [
-        "Research Thoroughly",
-        "Practice Responses",
-        "Ask Smart Questions",
+        "Data-Driven Analytics",
+        "Customized Recommendations",
+        "Improved Progress",
       ],
-      tagline: "Prepare well. Connect genuinely. Close strong.",
-      imagePath: "/images/ step3.png", // Replace with your actual image filename
+      tagline: "Turn every practice into progress and every insight into opportunity.",
+      imagePath: "/images/step3.png", // Replace with your actual image filename
     },
   ];
 
@@ -225,7 +226,7 @@ export default function Home() {
       </section> */}
 
       {/* Add the StepByStepProcess component here */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <StepByStepProcess
             heading="How it works"
@@ -277,6 +278,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <InfiniteLogoMarquee />
       <FAQSection />
     </div>
   );

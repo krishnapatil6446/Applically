@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+"use client";
+
+import React, { useRef, useState } from 'react';
 import { useAnimationFrame } from 'framer-motion';
 
 // Define an interface for the logo
@@ -21,14 +23,32 @@ const sampleLogos: Logo[] = [
   { src: "https://cdn.magicui.design/companies/Spotify.svg", alt: 'Company 8', width: 100, height: 50 },
 ];
 
+const LogoSectionWithHeading: React.FC = () => {
+  return (
+    <div className="w-full py-12">
+      {/* Integrations heading with exact styling */}
+      <div className="text-center ">
+        <span className="text-blue-500 font-semibold uppercase tracking-wide">
+          TRUSTED AND USED BY INSTITUTES
+        </span>
+      </div>
+      
+      {/* Trusted and Used by Institutes heading */}
+      
+      {/* Logo Marquee Component */}
+      <InfiniteLogoMarquee />
+    </div>
+  );
+};
+
 const InfiniteLogoMarquee: React.FC<{ logos?: Logo[], speed?: number }> = ({ 
   logos = sampleLogos,
   speed = 25 // Lower number = faster speed
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [loopCount, setLoopCount] = React.useState(2); // Start with 2 copies
-  const [scrollPosition, setScrollPosition] = React.useState(0);
+  const [loopCount, setLoopCount] = useState(2); // Start with 2 copies
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   // Use animation frame for smooth scrolling
   useAnimationFrame((time, delta) => {
@@ -97,4 +117,4 @@ const InfiniteLogoMarquee: React.FC<{ logos?: Logo[], speed?: number }> = ({
   );
 };
 
-export default InfiniteLogoMarquee;
+export default LogoSectionWithHeading;

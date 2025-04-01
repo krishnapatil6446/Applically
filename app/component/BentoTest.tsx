@@ -27,8 +27,8 @@ const Skeleton = () => (
 
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "Proprietary Technology",
+    description: "Developed in-house, our self-learning system continuously refines your resume and interview performance—no third-party wrappers here.",
     header: (
       <Compare
         firstImage="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg"
@@ -42,23 +42,23 @@ const items = [
     // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Innovative Personalization",
+    description: "Our custom-built LLM and AI algorithms analyze your profile and target job to create a tailored, high-impact resume.",
     header: <Skeleton />,
     className: "md:col-span-1",
 
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "Practice & Continuous Improvement",
+    description: "AI-driven mock interviews deliver real-time analytics and actionable feedback to rapidly boost your interview skills.",
     header: <Skeleton />,
     className: "md:col-span-1",
 
   },
   {
-    title: "The Power of Communication",
+    title: "Stunning Design",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "Advanced design algorithms power our smart templates, ensuring visually striking resumes that achieve top ATS scores.",
     header: <Skeleton />,
     className: "md:col-span-2",
 

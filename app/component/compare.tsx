@@ -33,7 +33,7 @@ export const Compare = ({
   const [isDragging, setIsDragging] = useState(false);
 
   const sliderRef = useRef<HTMLDivElement>(null);
-  
+
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
   const startAutoplay = useCallback(() => {
@@ -80,7 +80,8 @@ export const Compare = ({
   }
 
   const handleStart = useCallback(
-    (_clientX: number) => {
+    // Remove the unused parameter by removing the leading underscore
+    (clientX: number) => {
       if (slideMode === "drag") {
         setIsDragging(true);
       }

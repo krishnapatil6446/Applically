@@ -81,7 +81,7 @@ export const Compare = ({
 
   const handleStart = useCallback(
     // Remove the unused parameter by removing the leading underscore
-    (clientX: number) => {
+    (_clientX: number) => {
       if (slideMode === "drag") {
         setIsDragging(true);
       }

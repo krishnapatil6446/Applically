@@ -26,7 +26,7 @@ const ProcessStep: React.FC<Step> = ({ title, subtitle, quote, points, tagline, 
       <div className="bg-indigo-900 text-white rounded-lg p-6 mb-6 w-full max-w-xs shadow-lg flex items-center justify-center">
         <div className="w-24 h-24 relative">
           <Image 
-            src={``}
+            src={imagePath}
             alt={subtitle}
             layout="fill"
             objectFit="contain"

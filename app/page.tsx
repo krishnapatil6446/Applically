@@ -23,7 +23,7 @@ export default function Home() {
       quote: "Your resume is your first impression—make it unforgettable!",
       points: ["Tailored Perfection", "Mastering ATS", "Professionally Draft"],
       tagline: "Stand out. Impress recruiters. Open doors.",
-      imagePath: "step1.png", // Replace with your actual image filename
+      imagePath: "/images/step1.png", // Replace with your actual image filename
     },
     {
       title: "Step 2",
@@ -35,7 +35,7 @@ export default function Home() {
         "Follow Up Effectively",
       ],
       tagline: "Apply smart. Target well. Maximize chances.",
-      imagePath: "step1.png", // Replace with your actual image filename
+      imagePath: "/images/step2.png", // Replace with your actual image filename
     },
     {
       title: "Step 3",
@@ -47,7 +47,7 @@ export default function Home() {
         "Ask Smart Questions",
       ],
       tagline: "Prepare well. Connect genuinely. Close strong.",
-      imagePath: "step1.png", // Replace with your actual image filename
+      imagePath: "/images/ step3.png", // Replace with your actual image filename
     },
   ];
 

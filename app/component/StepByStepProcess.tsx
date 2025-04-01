@@ -23,21 +23,21 @@ export interface StepByStepProcessProps {
 const ProcessStep: React.FC<Step> = ({ title, subtitle, quote, points, tagline, imagePath }) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="bg-indigo-900 text-white rounded-lg p-6 mb-6 w-full max-w-xs shadow-lg flex items-center justify-center">
-        <div className="w-24 h-24 relative">
+      <div className="text-white mb-6 w-full max-w-xs flex items-center justify-center">
+        <div className="w-40 h-40 relative">
           <Image 
             src={imagePath}
             alt={subtitle}
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            width={160}
+            height={160}
+            className="rounded-lg object-contain"
           />
         </div>
       </div>
       
       <h2 className="text-2xl font-bold mb-2">{title}</h2>
       <h3 className="text-xl font-bold w-full text-center mb-2">{subtitle}</h3>
-      <p className="italic text-center w-full  mb-4">"{quote}"</p>
+      <p className="italic text-center w-full mb-4">&ldquo;{quote}&rdquo;</p>
       
       <div className="space-y-2">
         {points.map((point, index) => (

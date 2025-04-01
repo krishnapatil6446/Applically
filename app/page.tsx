@@ -226,10 +226,10 @@ export default function Home() {
       </section> */}
 
       {/* Add the StepByStepProcess component here */}
-      <section className="py-16 ">
-        <div className="container mx-auto px-4">
+      <section className=" ">
+        <div className="container mx-auto">
           <StepByStepProcess
-            heading="How it works"
+            heading="How Applically Helps You"
             subheading="Your journey to landing your dream job with Applically"
             steps={steps}
           />

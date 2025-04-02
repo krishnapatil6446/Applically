@@ -6,12 +6,7 @@ import { HoverEffect } from "./component/CardHover";
 import InfiniteLogoMarquee from "./component/InfiniteLogoMarquee";
 import IntegrationsSection from "./component/IntegrationSection";
 import StepByStepProcess, { Step } from "./component/StepByStepProcess";
-// import { StickyScroll } from "./component/Sticky-scroll-revel";
-// import { BentoGrid } from "./component/Bentogrid";
-// import { BentoGridItem } from "./component/Bentogrid";
 import { BentoGridSecondDemo } from "./component/BentoTest";
-
-//import { TextGenerateEffect } from "./component/TextGenerateEffect";
 import { InfiniteMovingCards } from "./component/InfiniteMovingCards";
 
 export default function Home() {
